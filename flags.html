@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Flags in the Firefly Meadow</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="flags_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="flags_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="flags_files/libs/quarto-html/popper.min.js"></script>
+<script src="flags_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="flags_files/libs/quarto-html/anchor.min.js"></script>
+<link href="flags_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="flags_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="flags_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="flags_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="flags_files/libs/bootstrap/bootstrap-8490814f2fbcee4d1d8166fa90528508.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script type="module" src="flags_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="flags_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Flags in the Firefly Meadow</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+body {
+  color: #f3efe2;
+  background:
+    radial-gradient(ellipse at 50% 12%, #314564 0, transparent 47%),
+    linear-gradient(180deg, #121b2b 0%, #17283a 48%, #192c2c 100%);
+}
+
+#quarto-content {
+  max-width: 1000px;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1.title {
+  color: #fff4d6;
+  font-family: Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
+.intro {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+  color: #d3dddb;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.meadow {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  margin: 0 auto 1.5rem;
+  border: 1px solid #879e8c66;
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 55px #080f1c99;
+}
+
+.cell {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cell-output figure {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem;
+  border: 1px solid #a4b7a577;
+  border-radius: 1rem;
+  background: #101b20cc;
+  box-shadow: 0 14px 40px #080f1c88;
+}
+
+.cell-output figure img {
+  max-height: 390px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  box-shadow: 0 6px 24px #0008;
+}
+
+.cell-output figcaption {
+  padding-top: 0.9rem;
+  color: #e7d8aa;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.form-label {
+  color: #f3efe2;
+}
+
+select.form-select {
+  color: #f7f1df;
+  border-color: #83998a;
+  background-color: #172528;
+}
+</style>
+<p class="intro">
+Pick a flag and let it glow beneath the fireflies. A little night-garden interlude, with flags from <a href="https://flagcdn.com/">FlagCDN</a>.
+</p>
+<svg class="meadow" viewbox="0 0 1100 340" role="img" aria-label="Two anime-style cats sitting in a moonlit meadow among fireflies">
+<defs> <lineargradient id="sky" x2="0" y2="1"> <stop stop-color="#202d4d"></stop> <stop offset="1" stop-color="#566b70"></stop> </lineargradient> <lineargradient id="field" x2="0" y2="1"> <stop stop-color="#405b48"></stop> <stop offset="1" stop-color="#142b29"></stop> </lineargradient> <radialgradient id="glow"> <stop stop-color="#fff5a8" stop-opacity=".95"></stop> <stop offset="1" stop-color="#bfffc2" stop-opacity="0"></stop> </radialgradient> <lineargradient id="fur" x2=".8" y2="1"> <stop stop-color="#f8e9c9"></stop> <stop offset="1" stop-color="#bcae91"></stop> </lineargradient> <lineargradient id="ginger" x2=".8" y2="1"> <stop stop-color="#eeb578"></stop> <stop offset="1" stop-color="#a86648"></stop> </lineargradient> </defs> <rect width="1100" height="340" fill="url(#sky)"></rect> <circle cx="850" cy="72" r="36" fill="#f3e8c8" opacity=".92"></circle> <circle cx="864" cy="62" r="36" fill="#263650"></circle> <g fill="#f6edce" opacity=".72"> <circle cx="125" cy="54" r="2"></circle><circle cx="220" cy="93" r="1.5"></circle> <circle cx="345" cy="44" r="1.7"></circle><circle cx="518" cy="75" r="1.5"></circle> <circle cx="647" cy="35" r="2"></circle><circle cx="1010" cy="100" r="1.5"></circle> <circle cx="956" cy="42" r="1.3"></circle><circle cx="74" cy="124" r="1.2"></circle> </g> <path d="M0 206 Q150 159 280 201 T550 191 T840 200 T1100 177 V340 H0Z" fill="#304a45"></path> <path d="M0 233 Q180 195 330 231 T650 221 T930 224 T1100 210 V340 H0Z" fill="url(#field)"></path> <g fill="url(#glow)"> <circle cx="152" cy="190" r="16"></circle><circle cx="273" cy="147" r="13"></circle> <circle cx="471" cy="176" r="16"></circle><circle cx="720" cy="156" r="14"></circle> <circle cx="930" cy="190" r="16"></circle><circle cx="1020" cy="145" r="13"></circle> </g> <g fill="#fff3a6"> <circle cx="152" cy="190" r="2.7"></circle><circle cx="273" cy="147" r="2.3"></circle> <circle cx="471" cy="176" r="2.5"></circle><circle cx="720" cy="156" r="2.4"></circle> <circle cx="930" cy="190" r="2.6"></circle><circle cx="1020" cy="145" r="2.2"></circle> </g> <g stroke="#91b482" stroke-width="2" opacity=".82"> <path d="M26 340q4-62 19-87m8 87q-3-48 12-70m76 70q3-58 20-84m34 84q-4-43 13-65m77 65q3-56 17-78m63 78q-7-51 9-76m399 76q4-54 21-78m43 78q-4-46 14-69m89 69q4-59 21-86m57 86q-3-47 15-70m54 70q3-59 17-84m53 84q-6-44 13-67m47 67q4-61 20-91"></path> </g> <g stroke="#668968" stroke-width="1.5" opacity=".8"> <path d="M98 340q-3-38-16-56m244 56q-1-36-14-51m97 51q2-41 15-61m377 61q-3-42-17-59m208 59q-2-36-16-53m89 53q3-43 17-61"></path> </g> <g> <ellipse cx="474" cy="287" rx="66" ry="13" fill="#122321" opacity=".55"></ellipse> <path d="M430 274q-8-35 3-66l-4-38 27 21q21-8 43 1l26-22-2 43q12 32-1 62z" fill="url(#fur)" stroke="#756957" stroke-width="2"></path> <path d="M435 208l-2-27 18 15m55 13 17-21-1 30" fill="#dbbca6"></path> <path d="M448 239q9-9 19 0m18 0q9-9 19 0" fill="none" stroke="#394a40" stroke-width="3" stroke-linecap="round"></path> <path d="M479 247l5 4 5-4-5-3z" fill="#b87980"></path> <path d="M484 251q-5 8-12 2m12-2q5 8 12 2" fill="none" stroke="#77645b" stroke-width="1.5"></path> <path d="M451 253l-27-5m27 11-27 3m87-9 27-6m-27 12 27 3" stroke="#e8dcc5" stroke-width="1.5"></path> <path d="M442 269q-27 12-33-2-4-11 9-11" fill="none" stroke="#d7c8aa" stroke-width="8" stroke-linecap="round"></path> </g> <g> <ellipse cx="608" cy="292" rx="58" ry="12" fill="#122321" opacity=".55"></ellipse> <path d="M571 276q-7-31 3-57l-3-34 25 19q18-7 37 1l24-20-2 39q10 27-1 52z" fill="url(#ginger)" stroke="#754c3b" stroke-width="2"></path> <path d="M578 202l-2-25 17 14m48 13 15-19-1 27" fill="#d28c69"></path> <path d="M585 235q8-8 16 0m16 0q8-8 16 0" fill="none" stroke="#463d34" stroke-width="3" stroke-linecap="round"></path> <path d="M608 243l5 4 5-4-5-3z" fill="#9d6165"></path> <path d="M613 247q-5 7-11 2m11-2q5 7 11 2" fill="none" stroke="#634c40" stroke-width="1.5"></path> <path d="M582 249l-23-4m23 10-24 3m75-9 24-5m-24 11 24 3" stroke="#e6c6a9" stroke-width="1.5"></path> <path d="M579 271q-24 10-29-3-4-10 8-10" fill="none" stroke="#c77d5e" stroke-width="8" stroke-linecap="round"></path> </g>
+</svg>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="162" data-source-offset="-0"><pre class="sourceCode js"><code class="sourceCode javascript" style="counter-reset: source-line 161;"><span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>flagCodes <span class="op">=</span> <span class="st">"ad ae af ag ai al am ao aq ar as at au aw ax az ba bb bd be bf bg bh bi bj bl bm bn bo bq br bs bt bv bw by bz ca cc cd cf cg ch ci ck cl cm cn co cr cu cv cw cx cy cz de dj dk dm do dz ec ee eg eh er es et fi fj fk fm fo fr ga gb gb-eng gb-nir gb-sct gb-wls gd ge gf gg gh gi gl gm gn gp gq gr gs gt gu gw gy hk hm hn hr ht hu id ie il im in io iq ir is it je jm jo jp ke kg kh ki km kn kp kr kw ky kz la lb lc li lk lr ls lt lu lv ly ma mc md me mf mg mh mk ml mm mn mo mp mq mr ms mt mu mv mw mx my mz na nc ne nf ng ni nl no np nr nu nz om pa pe pf pg ph pk pl pm pn pr ps pt pw py qa re ro rs ru rw sa sb sc sd se sg sh si sj sk sl sm sn so sr ss st sv sx sy sz tc td tf tg th tj tk tl tm tn to tr tt tv tw tz ua ug um us uy uz va vc ve vg vi vn vu wf ws xk ye yt za zm zw"</span><span class="op">.</span><span class="fu">split</span>(<span class="st">" "</span>)</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>regionNames <span class="op">=</span> <span class="kw">new</span> <span class="bu">Intl</span><span class="op">.</span><span class="fu">DisplayNames</span>([<span class="st">"en"</span>]<span class="op">,</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">"region"</span> })</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>subdivisionNames <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>([</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"gb-eng"</span><span class="op">,</span> <span class="st">"England"</span>]<span class="op">,</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"gb-nir"</span><span class="op">,</span> <span class="st">"Northern Ireland"</span>]<span class="op">,</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"gb-sct"</span><span class="op">,</span> <span class="st">"Scotland"</span>]<span class="op">,</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"gb-wls"</span><span class="op">,</span> <span class="st">"Wales"</span>]</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>flagOptions <span class="op">=</span> flagCodes<span class="op">.</span><span class="fu">map</span>(code <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  code<span class="op">,</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span><span class="op">:</span> subdivisionNames<span class="op">.</span><span class="fu">get</span>(code) <span class="op">||</span> regionNames<span class="op">.</span><span class="fu">of</span>(code<span class="op">.</span><span class="fu">toUpperCase</span>()) <span class="op">||</span> code<span class="op">.</span><span class="fu">toUpperCase</span>()</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>viewof selectedFlag <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(flagOptions<span class="op">,</span> {</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Select a flag"</span><span class="op">,</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> flag <span class="kw">=&gt;</span> flag<span class="op">.</span><span class="at">name</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;figure&gt;</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;img</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="vs">    src="flags/</span><span class="sc">${</span>selectedFlag<span class="op">.</span><span class="at">code</span><span class="sc">}</span><span class="vs">.png"</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="vs">    alt="Flag of </span><span class="sc">${</span>selectedFlag<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="vs">    style="display: block; width: min(100%, 640px); height: auto;"</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="vs">  &gt;</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;figcaption&gt;</span><span class="sc">${</span>selectedFlag<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">&lt;/figcaption&gt;</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/figure&gt;`</span></span></code></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZsYWdDb2RlcyA9IFwiYWQgYWUgYWYgYWcgYWkgYWwgYW0gYW8gYXEgYXIgYXMgYXQgYXUgYXcgYXggYXogYmEgYmIgYmQgYmUgYmYgYmcgYmggYmkgYmogYmwgYm0gYm4gYm8gYnEgYnIgYnMgYnQgYnYgYncgYnkgYnogY2EgY2MgY2QgY2YgY2cgY2ggY2kgY2sgY2wgY20gY24gY28gY3IgY3UgY3YgY3cgY3ggY3kgY3ogZGUgZGogZGsgZG0gZG8gZHogZWMgZWUgZWcgZWggZXIgZXMgZXQgZmkgZmogZmsgZm0gZm8gZnIgZ2EgZ2IgZ2ItZW5nIGdiLW5pciBnYi1zY3QgZ2Itd2xzIGdkIGdlIGdmIGdnIGdoIGdpIGdsIGdtIGduIGdwIGdxIGdyIGdzIGd0IGd1IGd3IGd5IGhrIGhtIGhuIGhyIGh0IGh1IGlkIGllIGlsIGltIGluIGlvIGlxIGlyIGlzIGl0IGplIGptIGpvIGpwIGtlIGtnIGtoIGtpIGttIGtuIGtwIGtyIGt3IGt5IGt6IGxhIGxiIGxjIGxpIGxrIGxyIGxzIGx0IGx1IGx2IGx5IG1hIG1jIG1kIG1lIG1mIG1nIG1oIG1rIG1sIG1tIG1uIG1vIG1wIG1xIG1yIG1zIG10IG11IG12IG13IG14IG15IG16IG5hIG5jIG5lIG5mIG5nIG5pIG5sIG5vIG5wIG5yIG51IG56IG9tIHBhIHBlIHBmIHBnIHBoIHBrIHBsIHBtIHBuIHByIHBzIHB0IHB3IHB5IHFhIHJlIHJvIHJzIHJ1IHJ3IHNhIHNiIHNjIHNkIHNlIHNnIHNoIHNpIHNqIHNrIHNsIHNtIHNuIHNvIHNyIHNzIHN0IHN2IHN4IHN5IHN6IHRjIHRkIHRmIHRnIHRoIHRqIHRrIHRsIHRtIHRuIHRvIHRyIHR0IHR2IHR3IHR6IHVhIHVnIHVtIHVzIHV5IHV6IHZhIHZjIHZlIHZnIHZpIHZuIHZ1IHdmIHdzIHhrIHllIHl0IHphIHptIHp3XCIuc3BsaXQoXCIgXCIpXG5cbnJlZ2lvbk5hbWVzID0gbmV3IEludGwuRGlzcGxheU5hbWVzKFtcImVuXCJdLCB7IHR5cGU6IFwicmVnaW9uXCIgfSlcblxuc3ViZGl2aXNpb25OYW1lcyA9IG5ldyBNYXAoW1xuICBbXCJnYi1lbmdcIiwgXCJFbmdsYW5kXCJdLFxuICBbXCJnYi1uaXJcIiwgXCJOb3J0aGVybiBJcmVsYW5kXCJdLFxuICBbXCJnYi1zY3RcIiwgXCJTY290bGFuZFwiXSxcbiAgW1wiZ2Itd2xzXCIsIFwiV2FsZXNcIl1cbl0pXG5cbmZsYWdPcHRpb25zID0gZmxhZ0NvZGVzLm1hcChjb2RlID0+ICh7XG4gIGNvZGUsXG4gIG5hbWU6IHN1YmRpdmlzaW9uTmFtZXMuZ2V0KGNvZGUpIHx8IHJlZ2lvbk5hbWVzLm9mKGNvZGUudG9VcHBlckNhc2UoKSkgfHwgY29kZS50b1VwcGVyQ2FzZSgpXG59KSlcblxudmlld29mIHNlbGVjdGVkRmxhZyA9IElucHV0cy5zZWxlY3QoZmxhZ09wdGlvbnMsIHtcbiAgbGFiZWw6IFwiU2VsZWN0IGEgZmxhZ1wiLFxuICBmb3JtYXQ6IGZsYWcgPT4gZmxhZy5uYW1lXG59KVxuXG5odG1sYDxmaWd1cmU+XG4gIDxpbWdcbiAgICBzcmM9XCJmbGFncy8ke3NlbGVjdGVkRmxhZy5jb2RlfS5wbmdcIlxuICAgIGFsdD1cIkZsYWcgb2YgJHtzZWxlY3RlZEZsYWcubmFtZX1cIlxuICAgIHN0eWxlPVwiZGlzcGxheTogYmxvY2s7IHdpZHRoOiBtaW4oMTAwJSwgNjQwcHgpOyBoZWlnaHQ6IGF1dG87XCJcbiAgPlxuICA8ZmlnY2FwdGlvbj4ke3NlbGVjdGVkRmxhZy5uYW1lfTwvZmlnY2FwdGlvbj5cbjwvZmlndXJlPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnc2VsZWN0ZWRGbGFnJykifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../..";
+window._ojs.paths.runtimeToRoot = "../../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
