@@ -35,8 +35,8 @@ h1.title {
 .meadow {
   display: block;
   width: 100%;
-  max-height: 340px;
-  margin: 0 auto 1.5rem;
+  height: 150px;
+  margin: 0 auto 0.75rem;
   border: 1px solid #879e8c66;
   border-radius: 1.25rem;
   box-shadow: 0 18px 55px #080f1c99;
@@ -49,16 +49,61 @@ h1.title {
 
 .cell-output figure {
   margin: 1.5rem 0 0;
-  padding: 1.25rem;
+  padding: 1.5rem;
   border: 1px solid #a4b7a577;
   border-radius: 1rem;
   background: #101b20cc;
   box-shadow: 0 14px 40px #080f1c88;
 }
 
+.flag-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+@keyframes fruit-dance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-14px) rotate(-14deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(-8px) rotate(14deg) scale(1.08);
+  }
+}
+
+.dancing-fruit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dancing-fruit {
+  display: inline-block;
+  font-size: 3.5rem;
+  animation: fruit-dance 0.85s infinite ease-in-out;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+
+.fruit-label {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: #dfd7be;
+}
+
 .cell-output figure img {
-  max-height: 390px;
+  max-height: 420px;
   margin: 0 auto;
+  padding: 0.5rem;
+  background: #f8f6ef;
   border-radius: 0.5rem;
   object-fit: contain;
   box-shadow: 0 6px 24px #0008;
@@ -180,12 +225,74 @@ viewof selectedFlag = Inputs.select(flagOptions, {
   format: flag => flag.name
 })
 
+nationalFruits = new Map([
+  ["jm", { name: "Ackee", emoji: "🍈" }],
+  ["in", { name: "Mango", emoji: "🥭" }],
+  ["pk", { name: "Mango", emoji: "🥭" }],
+  ["ph", { name: "Mango", emoji: "🥭" }],
+  ["bd", { name: "Jackfruit", emoji: "🍈" }],
+  ["mx", { name: "Avocado", emoji: "🥑" }],
+  ["us", { name: "Blueberry", emoji: "🫐" }],
+  ["ca", { name: "Blueberry", emoji: "🫐" }],
+  ["jp", { name: "Persimmon", emoji: "🍑" }],
+  ["cn", { name: "Kiwifruit", emoji: "🥝" }],
+  ["nz", { name: "Kiwifruit", emoji: "🥝" }],
+  ["br", { name: "Cupuaçu", emoji: "🥥" }],
+  ["th", { name: "Mangosteen", emoji: "🫐" }],
+  ["my", { name: "Papaya", emoji: "🍈" }],
+  ["id", { name: "Durian", emoji: "🍈" }],
+  ["vn", { name: "Dragon Fruit", emoji: "🐉" }],
+  ["it", { name: "Strawberry", emoji: "🍓" }],
+  ["es", { name: "Grape", emoji: "🍇" }],
+  ["fr", { name: "Pear", emoji: "🍐" }],
+  ["de", { name: "Apple", emoji: "🍎" }],
+  ["gb", { name: "Apple", emoji: "🍎" }],
+  ["gb-eng", { name: "Apple", emoji: "🍎" }],
+  ["gb-sct", { name: "Raspberry", emoji: "🫐" }],
+  ["gb-wls", { name: "Apple", emoji: "🍏" }],
+  ["gb-nir", { name: "Apple", emoji: "🍏" }],
+  ["gr", { name: "Olive", emoji: "🫒" }],
+  ["ru", { name: "Apple", emoji: "🍎" }],
+  ["tr", { name: "Pomegranate", emoji: "🍎" }],
+  ["ir", { name: "Pomegranate", emoji: "🍎" }],
+  ["eg", { name: "Banana", emoji: "🍌" }],
+  ["sa", { name: "Date Palm", emoji: "🌴" }],
+  ["at", { name: "Apple", emoji: "🍎" }],
+  ["au", { name: "Peach", emoji: "🍑" }],
+  ["pt", { name: "Apple", emoji: "🍎" }],
+  ["ch", { name: "Apple", emoji: "🍎" }],
+  ["se", { name: "Lingonberry", emoji: "🫐" }],
+  ["no", { name: "Cloudberry", emoji: "🫐" }],
+  ["fi", { name: "Bilberry", emoji: "🫐" }],
+  ["pl", { name: "Apple", emoji: "🍎" }],
+  ["ua", { name: "Cherry", emoji: "🍒" }],
+  ["ro", { name: "Plum", emoji: "🫐" }],
+  ["co", { name: "Lulo", emoji: "🍈" }],
+  ["pe", { name: "Lucuma", emoji: "🥑" }],
+  ["cl", { name: "Strawberry", emoji: "🍓" }],
+  ["ar", { name: "Apple", emoji: "🍎" }],
+  ["za", { name: "Peach", emoji: "🍑" }],
+  ["gh", { name: "Plantain", emoji: "🍌" }],
+  ["ng", { name: "Palm Fruit", emoji: "🌴" }],
+  ["ke", { name: "Mango", emoji: "🥭" }],
+  ["il", { name: "Sabra / Fig", emoji: "🌵" }],
+  ["sg", { name: "Durian", emoji: "🍈" }]
+])
+
+fruit = nationalFruits.get(selectedFlag.code) || { name: "National Fruit", emoji: "🍊" }
+
 html`<figure>
-  <img
-    src="flags/${selectedFlag.code}.png"
-    alt="Flag of ${selectedFlag.name}"
-    style="display: block; width: min(100%, 640px); height: auto;"
-  >
+  <div class="flag-stage">
+    <img
+      src="flags/${selectedFlag.code}.png"
+      alt="Flag of ${selectedFlag.name}"
+      style="display: block; width: min(100%, 540px); height: auto;"
+    >
+    <div class="dancing-fruit-container">
+      <span class="dancing-fruit" role="img" aria-label="${fruit.name}">${fruit.emoji}</span>
+      <span class="fruit-label">${fruit.name}</span>
+    </div>
+  </div>
   <figcaption>${selectedFlag.name}</figcaption>
 </figure>`
 ```
